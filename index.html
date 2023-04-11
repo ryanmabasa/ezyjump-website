@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+
+  
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <header class="grid grid-cols-2 lg:grid-cols-3 gap-2">
+    <div class="logo px-4 py-1">
+      <img class="object-cover h-14 w-35" src="logo-md-cropped.png" alt="logo" />
+    </div>
+    <nav class="lg:flex items-center hidden">
+      <ul class="flex flex-auto justify-between font-light text-slate-500">
+        <li class="grow-0 basis-1/3"><a href="#">Who We Are</a></li>
+        <li class="grow-0 basis-1/3"><a href="#">What We Offer</a></li>
+        <li class="grow-0 basis-1/3"><a href="#">Get in Touch</a></li>
+      </ul>
+    </nav>
+    <div class="lg:hidden flex items-center justify-end px-4">
+      <div class="space-y-2" onclick="handleOnClick();">
+        <div class="w-8 h-0.5 bg-indigo-600"></div>
+        <div class="w-8 h-0.5 bg-indigo-600"></div>
+        <div class="w-8 h-0.5 bg-indigo-600"></div>
+      </div>
+    </div>
+
+  </header>
+  <div class="bg-indigo-500" style="height:1000px;">
+
+  </div>
+ 
+
+  <!-- TODO fix height -->
+  <!-- Navbar Overlay -->
+  <div id="overlay" class="fixed h-full w-full top-0 left-0 bg-white overflow-hidden hidden">
+
+    <div class="grid grid-cols-3 grid-rows-3 gap-2 h-full w-full">
+      <label for="radio2" class="cross">X</label>
+      <nav class="col-start-2 row-start-2">
+          <ul class="flex flex-col font-light text-slate-500 justify-around">
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">What We Offer</a></li>
+            <li><a href="#">Get in Touch</a></li>
+          </ul>
+      </nav>
+    </div>
+
+  </div>
+<script type="text/javascript">
+
+  function handleOnClick(){
+   var overlay = document.getElementById("overlay");
+
+   var overlayClassList = overlay.classList;
+   overlayClassList.remove("hidden");
+
+  }
+</script>
+</body>
+
+</html>
